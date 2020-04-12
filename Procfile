@@ -1,1 +1,1 @@
-web: gunicorn flash_try:app
+web: gunicorn flask_try:app

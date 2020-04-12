@@ -4,7 +4,9 @@ from flask import Flask, jsonify
 #from json import jsonify
 app = Flask(__name__)
 
-activities=['Fruiteries i verduleries', 'Carnisseries']
+tipus = input(str("Donam un tipus de comperç: "))
+tipus2 = input(str("Dona'm un tipus de comerç: "))
+activities=[tipus, tipus2]
 home_coords=Coords(x_utm=430226.85, y_utm=4581590.93)
 pf = PathFinder()
 

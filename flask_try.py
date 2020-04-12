@@ -1,11 +1,15 @@
 from path_finder import PathFinder
 from structures import Coords
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 #from json import jsonify
 app = Flask(__name__)
 
-activities=['Fruiteries i verduleries', 'Carnisseries']
-home_coords=Coords(x_utm=430226.85, y_utm=4581590.93)
+content = request.json
+activities = []
+for activity in content['activities']:
+    activities.append(activity)
+
+home_coords=Coords(latitude=content['latitude'], longitude=content['longitude'])
 pf = PathFinder()
 
 @app.route('/')

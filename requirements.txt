@@ -1,3 +1,10 @@
-geographiclib==1.50       # via geopy
-geopy==1.21.0             # via -r requirements.in
+certifi==2020.4.5.1
+chardet==3.0.4
+geographiclib==1.50
+geopy==1.21.0
+googlemaps==4.2.0
 gunicorn==20.0.4
+idna==2.9
+populartimes==2.0
+requests==2.23.0
+urllib3==1.25.8

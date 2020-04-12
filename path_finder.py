@@ -101,7 +101,7 @@ class PathFinder:
             self._gmaps_handler.get_shop_info(shop)
             output.append(shop.to_dict())
         print(f'Total runtime: {time() - init:.2f}s')
-        return json.dumps(output).encode('utf8')
+        return output
 
     def find_best_supermarket(self, my_coords, max_radius=1000, max_shops=20):
         init = time()

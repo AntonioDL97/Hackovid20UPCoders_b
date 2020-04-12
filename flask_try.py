@@ -4,7 +4,7 @@ from flask import Flask, jsonify, request
 #from json import jsonify
 app = Flask(__name__)
 
-content = request.json
+content = request.get_json()
 activities = []
 for activity in content['activities']:
     activities.append(activity)

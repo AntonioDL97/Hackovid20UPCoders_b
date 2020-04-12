@@ -12,6 +12,6 @@ for activity in content['activities']:
 home_coords=Coords(latitude=content['latitude'], longitude=content['longitude'])
 pf = PathFinder()
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def execute_smartshopping():
     return jsonify(pf.find_best_path(desired_activities=activities, my_coords=home_coords))
